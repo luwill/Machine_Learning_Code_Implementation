@@ -29,7 +29,6 @@ class lr_model():
         b = 0
         return w, b
 
-
     def linear_loss(self, X, y, w, b):
         num_train = X.shape[0]
         num_feature = X.shape[1]
@@ -39,7 +38,6 @@ class lr_model():
         dw = np.dot(X.T, (y_hat - y)) / num_train
         db = np.sum((y_hat - y)) / num_train
         return y_hat, loss, dw, db
-
 
     def linear_train(self, X, y, learning_rate, epochs):
         w, b = self.initialize_params(X.shape[1])
