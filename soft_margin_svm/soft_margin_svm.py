@@ -119,7 +119,6 @@ if __name__ == "__main__":
         y2 = np.ones(len(X2)) * -1
         return X1, y1, X2, y2
 
-
     def gen_non_lin_separable_data():
         mean1 = [-1, 2]
         mean2 = [1, -1]
@@ -134,7 +133,6 @@ if __name__ == "__main__":
         y2 = np.ones(len(X2)) * -1
         return X1, y1, X2, y2
 
-
     def gen_lin_separable_overlap_data():
         # generate training data in the 2-d case
         mean1 = np.array([0, 2])
@@ -146,7 +144,6 @@ if __name__ == "__main__":
         y2 = np.ones(len(X2)) * -1
         return X1, y1, X2, y2
 
-
     def split_train(X1, y1, X2, y2):
         X1_train = X1[:90]
         y1_train = y1[:90]
@@ -156,9 +153,8 @@ if __name__ == "__main__":
         y_train = np.hstack((y1_train, y2_train))
         return X_train, y_train
 
-
     def split_test(X1, y1, X2, y2):
-        X1_test = X1[90:]
+        X1_test = X1[90:] 
         y1_test = y1[90:]
         X2_test = X2[90:]
         y2_test = y2[90:]
