@@ -136,6 +136,7 @@ class ClassificationTree(BinaryDecisionTree):
     def _calculate_gini_impurity(self, y, y1, y2):
         p = len(y1) / len(y)
         gini = calculate_gini(y)
+	# 基尼不纯度
         gini_impurity = p * calculate_gini(y1) + (1-p) * calculate_gini(y2)
         return gini_impurity
     
