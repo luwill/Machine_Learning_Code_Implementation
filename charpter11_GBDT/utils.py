@@ -13,12 +13,14 @@ def feature_split(X, feature_i, threshold):
 
     return np.array([X_left, X_right])
 
+
 ### 计算基尼指数
 def calculate_gini(y):
     y = y.tolist()
     probs = [y.count(i)/len(y) for i in np.unique(y)]
     gini = sum([p*(1-p) for p in probs])
     return gini
+
 	
 ### 打乱数据
 def data_shuffle(X, y, seed=None):
