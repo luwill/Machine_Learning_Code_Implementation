@@ -1,5 +1,6 @@
 import numpy as np
 
+# 定义单层感知机类
 class Perceptron:
     def __init__(self):
         pass
