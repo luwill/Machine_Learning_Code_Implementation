@@ -129,8 +129,7 @@ class BinaryDecisionTree(object):
         y_pred = [self.predict_value(sample) for sample in X]
         return y_pred
 
-		
-		
+# CART分类树		
 class ClassificationTree(BinaryDecisionTree):
     ### 定义基尼不纯度计算过程
     def _calculate_gini_impurity(self, y, y1, y2):
