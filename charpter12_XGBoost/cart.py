@@ -15,7 +15,6 @@ class TreeNode():
         self.left_branch = left_branch     
         # 右子树
         self.right_branch = right_branch
-
 		
 ### 定义二叉决策树
 class BinaryDecisionTree(object):
@@ -156,7 +155,7 @@ class ClassificationTree(BinaryDecisionTree):
         self.impurity_calculation = self._calculate_gini_impurity
         self._leaf_value_calculation = self._majority_vote
         super(ClassificationTree, self).fit(X, y)
-
+	
 		
 ### CART回归树
 class RegressionTree(BinaryDecisionTree):
