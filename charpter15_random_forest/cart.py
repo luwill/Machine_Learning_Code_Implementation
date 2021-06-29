@@ -41,7 +41,7 @@ class BinaryDecisionTree(object):
     def fit(self, X, y, loss=None):
         # 递归构建决策树
         self.root = self._build_tree(X, y)
-        self.loss=None
+        self.loss = None
 
     ### 决策树构建函数
     def _build_tree(self, X, y, current_depth=0):
@@ -129,8 +129,7 @@ class BinaryDecisionTree(object):
         y_pred = [self.predict_value(sample) for sample in X]
         return y_pred
 
-		
-		
+				
 class ClassificationTree(BinaryDecisionTree):
     ### 定义基尼不纯度计算过程
     def _calculate_gini_impurity(self, y, y1, y2):
