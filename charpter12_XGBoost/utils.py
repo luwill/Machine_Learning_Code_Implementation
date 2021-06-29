@@ -10,7 +10,6 @@ def feature_split(X, feature_i, threshold):
 
     X_left = np.array([sample for sample in X if split_func(sample)])
     X_right = np.array([sample for sample in X if not split_func(sample)])
-
     return np.array([X_left, X_right])
 
 ### 计算基尼指数
