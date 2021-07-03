@@ -18,6 +18,7 @@ class Perceptron:
             for i in range(len(X_train)):
                 X = X_train[i]
                 y = y_train[i]
+                
                 # 如果存在误分类点
                 # 更新参数
                 # 直到没有误分类点
