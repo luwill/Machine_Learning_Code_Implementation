@@ -13,8 +13,10 @@ def feature_split(X, feature_i, threshold):
 
     return np.array([X_left, X_right])
 
+
 ### 计算基尼指数
 def calculate_gini(y):
+    # 将数组转化为列表
     y = y.tolist()
     probs = [y.count(i)/len(y) for i in np.unique(y)]
     gini = sum([p*(1-p) for p in probs])
