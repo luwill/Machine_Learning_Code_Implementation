@@ -23,7 +23,7 @@
 | 12 | 77 | 表7-3数字统计错误 | 技术错误 | 应改为正确的统计数值：将“晴”和“雨”两行数值互换，相应的表格后第一个式子E(3,2)改为E(2,3)，E(2,3)改为E(3,2) |
 | 13 | 79 | 倒数第四行名词错误 | 技术错误 | 应将信息增益比改为基尼指数 |
 | 14  | 90 | 代码7-10中部分变量命名不统一 | 技术错误 | 应统一best_subsets、left_branch、feature_ix等变量 |
-| 15  | 92 | 代码7-11倒数第3行变量有误 | 技术错误 | 应将impurity_calculation改为gini_impurity_calc，_leaf_value_calculation去掉第一个下划线 |
+| 15  | 92 | 代码7-11倒数第3行变量有误 | 技术错误 | 应将impurity_calculation改为gini_impurity_calc，_leaf_value_calculation改为leaf_value_calc |
 | 16  | 111 | 代码8-12倒数第9行  | 技术错误  | 多了一个parameter参数，应去掉  |
 | 17  | 119 | 第一段第一行L(x,α,β)有误 | 技术错误  | 应改为L(w,b,α) |
 | 18  | 167 | 图12-1倒数第2行最优点式子有误 | 技术错误 | 应改为式12-18 |
