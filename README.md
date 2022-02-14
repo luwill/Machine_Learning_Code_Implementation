@@ -43,5 +43,5 @@
 | 2 | 33 | 第3段第3行“则式（3-13）可表示为”应补充描述 | 建议 | 应补充描述为“则式（3-13）似然项可表示为” |
 | 3 | 145 | 倒数第2段中的t | 技术错误 | t应改为T |
 | 4 | 155 | 最后一段式（11-10） | 文字或格式错误 | （11-10）应改为（11-9）|
-| 5 | 169-170 | 代码12-1倒数第2、3行impurity_calculation、\_leaf_value_calculation与决策树一章变量不统一 | 文字或格式错误 | 应统一为hini_impurity_calc、leaf_value_calc |
+| 5 | 169-170 | 代码12-1倒数第2、3行impurity_calculation、\_leaf_value_calculation与决策树一章变量不统一 | 文字或格式错误 | 应统一为gini_impurity_calc、leaf_value_calc |
 | 6 | 225 | 式（19-11）多了一个VTV | 技术错误 | 去掉末尾的VTV即可 |
