@@ -43,10 +43,10 @@
 | 2 | 29 | 代码2-8输出第二行 | 技术错误 | 应保留两位小数：0.54 |
 | 3 | 33 | 第3段第3行“则式（3-13）可表示为”应补充描述 | 建议 | 应补充描述为“则式（3-13）似然项可表示为” |
 | 4 | 40 | 代码3-9第一行和最后一行函数名有误 | 技术错误 | 应统一为plot_decision_boundary |
-| 4 | 145 | 倒数第2段中的t | 技术错误 | t应改为T |
-| 5 | 155 | 最后一段式（11-10） | 文字或格式错误 | （11-10）应改为（11-9）|
-| 6 | 169-170 | 代码12-1倒数第2、3行impurity_calculation、\_leaf_value_calculation与决策树一章变量不统一 | 文字或格式错误 | 应统一为gini_impurity_calc、leaf_value_calc |
-| 7 | 225 | 式（19-11）多了一个VTV | 技术错误 | 去掉末尾的VTV即可 |
-| 8 | 241 | 代码21-1倒数第2行和第12行class_condition_prob变量名未统一 | 技术错误 | 统一为prior_condition_prob |
-| 9 | 242 | 代码21-2倒数第5行未缩进，以及prior命名未统一 | 技术错误 | 应缩进该行，并将prior命名统一为class_prior |
-| 10 | 248 | 代码21-8倒数第4和第6行student_model和student_infer命名未统一 | 技术错误 | 应统一为letter_model和letter_infer |
+| 5 | 145 | 倒数第2段中的t | 技术错误 | t应改为T |
+| 6 | 155 | 最后一段式（11-10） | 文字或格式错误 | （11-10）应改为（11-9）|
+| 7 | 169-170 | 代码12-1倒数第2、3行impurity_calculation、\_leaf_value_calculation与决策树一章变量不统一 | 文字或格式错误 | 应统一为gini_impurity_calc、leaf_value_calc |
+| 8 | 225 | 式（19-11）多了一个VTV | 技术错误 | 去掉末尾的VTV即可 |
+| 9 | 241 | 代码21-1倒数第2行和第12行class_condition_prob变量名未统一 | 技术错误 | 统一为prior_condition_prob |
+| 10 | 242 | 代码21-2倒数第5行未缩进，以及prior命名未统一 | 技术错误 | 应缩进该行，并将prior命名统一为class_prior |
+| 11 | 248 | 代码21-8倒数第4和第6行student_model和student_infer命名未统一 | 技术错误 | 应统一为letter_model和letter_infer |
