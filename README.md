@@ -9,11 +9,11 @@
 ### 纸质版
 <img 
 src="https://github.com/luwill/louwill-python-learning/raw/master/cover.jpg"
-width = "400" height = "250">
+width = "250" height = "350">
 <br>
 <div style="color: #999;
 font-size:11px;
-padding: 2px;">Cover</div>
+padding: 2px;"></div>
 
 购买链接：[京东](https://item.m.jd.com/product/13581834.html?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&gx=RnEwwmcPPmKLy9RJ8MEwBIgWMxg) | [当当](https://u.dangdang.com/G6KeI)
 
