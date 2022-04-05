@@ -65,3 +65,7 @@ padding: 2px;"></div>
 | 13 | 248 | 代码21-8倒数第4和第6行student_model和student_infer命名未统一 | 技术错误 | 应统一为letter_model和letter_infer |
 
 **注意：以上勘误在2022.3第三次印刷版本中均已更正！**
+
+
+### LICENSE
+本项目采用[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。
