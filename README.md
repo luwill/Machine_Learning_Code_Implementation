@@ -9,7 +9,7 @@
 ### 纸质版
 <img 
 src="https://github.com/luwill/louwill-python-learning/raw/master/cover.jpg"
-width = "250" height = "350">
+width = "300" height = "350">
 <br>
 <div style="color: #999;
 font-size:11px;
