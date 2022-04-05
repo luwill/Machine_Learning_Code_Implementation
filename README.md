@@ -15,7 +15,7 @@ width = "280" height = "350">
 font-size:11px;
 padding: 2px;"></div>
 
-购买链接：[京东](https://item.m.jd.com/product/13581834.html?&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&gx=RnEwwmcPPmKLy9RJ8MEwBIgWMxg) | [当当](https://u.dangdang.com/G6KeI)
+购买链接：[京东](https://item.jd.com/13581834.html) | [当当](http://product.dangdang.com/29354670.html)
 
 ### 全书勘误表
 #### 第一版第一次印刷勘误
