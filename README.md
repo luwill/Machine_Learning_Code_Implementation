@@ -25,7 +25,7 @@ padding: 2px;"></div>
 
 ---
 ### 全书勘误表
-勘误表：
+勘误表：[勘误表](https://github.com/luwill/Machine_Learning_Code_Implementation/blob/master/Errata/Errata.md)
 
 ---
 ### LICENSE
