@@ -23,6 +23,47 @@ padding: 2px;"></div>
 ### 配套PPT
 为方便大家更好的使用本书，本书也配套了随书的PPT，购买过纸质书的读者可以在机器学习实验室公众号联系读者获取。
 
+<img 
+src="https://github.com/luwill/Machine_Learning_Code_Implementation/tree/master/pic/ppt_1.png"
+width = "534" height = "300">
+<br>
+<div style="color: #999;
+font-size:11px;
+padding: 2px;">第1章示例</div>
+
+<img 
+src="https://github.com/luwill/Machine_Learning_Code_Implementation/tree/master/pic/ppt_2.png"
+width = "534" height = "300">
+<br>
+<div style="color: #999;
+font-size:11px;
+padding: 2px;">第2章示例</div>
+
+
+<img 
+src="https://github.com/luwill/Machine_Learning_Code_Implementation/tree/master/pic/ppt_1.png"
+width = "534" height = "300">
+<br>
+<div style="color: #999;
+font-size:11px;
+padding: 2px;">第7章示例</div>
+
+<img 
+src="https://github.com/luwill/Machine_Learning_Code_Implementation/tree/master/pic/ppt_1.png"
+width = "534" height = "300">
+<br>
+<div style="color: #999;
+font-size:11px;
+padding: 2px;">第12章示例</div>
+
+
+<img 
+src="https://github.com/luwill/Machine_Learning_Code_Implementation/tree/master/pic/ppt_1.png"
+width = "534" height = "300">
+<br>
+<div style="color: #999;
+font-size:11px;
+padding: 2px;">第23章示例</div>
 ---
 ### 配套视频讲解（更新中）
 为了帮助广大读者更好地学习和掌握机器学习的一般理论和方法，笔者在PPT基础上同时在为全书配套讲解视频。包括模型的公式手推和代码的讲解。
