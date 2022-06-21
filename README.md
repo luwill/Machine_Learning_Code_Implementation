@@ -21,7 +21,7 @@ padding: 2px;"></div>
 
 ---
 ### 配套PPT
-为方便大家更好的使用本书，本书也配套了随书的PPT，购买过纸质书的读者可以在机器学习实验室公众号联系读者获取。
+为方便大家更好的使用本书，本书也配套了随书的PPT，购买过纸质书的读者可以在机器学习实验室公众号联系作者获取。
 
 <img 
 src="https://github.com/luwill/Machine_Learning_Code_Implementation/blob/master/pic/ppt_1.png"
