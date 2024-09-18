@@ -20,7 +20,7 @@ class TreeNode():
 ### 定义二叉决策树
 class BinaryDecisionTree(object):
     ### 决策树初始参数
-    def __init__(self, min_samples_split=2, min_gini_impurity=999,
+    def __init__(self, min_samples_split=2, min_gini_impurity=float("inf"),
                  max_depth=float("inf"), loss=None):
         # 根结点
         self.root = None  
@@ -46,14 +46,11 @@ class BinaryDecisionTree(object):
     ### 决策树构建函数
     def _build_tree(self, X, y, current_depth=0):
         # 初始化最小基尼不纯度
-        init_gini_impurity = 999
+        init_gini_impurity = self.gini_impurity_calculation(y)
         # 初始化最佳特征索引和阈值
         best_criteria = None    
         # 初始化数据子集
         best_sets = None        
-        
-        if len(np.shape(y)) == 1:
-            y = np.expand_dims(y, axis=1)
 
         # 合并输入和标签
         Xy = np.concatenate((X, y), axis=1)
@@ -94,33 +91,39 @@ class BinaryDecisionTree(object):
                                 "righty": Xy2[:, n_features:]   
                                 }
         
-        # 如果计算的最小不纯度小于设定的最小不纯度
-        if init_gini_impurity < self.mini_gini_impurity:
+        # 如果best_criteria不为None，且计算的最小不纯度小于设定的最小不纯度
+        if best_criteria and init_gini_impurity < self.mini_gini_impurity:
             # 分别构建左右子树
             left_branch = self._build_tree(best_sets["leftX"], best_sets["lefty"], current_depth + 1)
             right_branch = self._build_tree(best_sets["rightX"], best_sets["righty"], current_depth + 1)
-            return TreeNode(feature_i=best_criteria["feature_i"], threshold=best_criteria["threshold"], left_branch=left_branch, right_branch=right_branch)
+            return TreeNode(feature_i=best_criteria["feature_i"], threshold=best_criteria[
+                                "threshold"], left_branch=left_branch, right_branch=right_branch)
 
         # 计算叶子计算取值
         leaf_value = self._leaf_value_calculation(y)
+
         return TreeNode(leaf_value=leaf_value)
 
     ### 定义二叉树值预测函数
     def predict_value(self, x, tree=None):
         if tree is None:
             tree = self.root
+
         # 如果叶子节点已有值，则直接返回已有值
         if tree.leaf_value is not None:
             return tree.leaf_value
+
         # 选择特征并获取特征值
         feature_value = x[tree.feature_i]
+
         # 判断落入左子树还是右子树
         branch = tree.right_branch
         if isinstance(feature_value, int) or isinstance(feature_value, float):
-            if feature_value >= tree.threshold:
+            if feature_value <= tree.threshold:
                 branch = tree.left_branch
         elif feature_value == tree.threshold:
-            branch = tree.right_branch
+            branch = tree.left_branch
+
         # 测试子集
         return self.predict_value(x, branch)
 
@@ -135,7 +138,6 @@ class ClassificationTree(BinaryDecisionTree):
     def _calculate_gini_impurity(self, y, y1, y2):
         p = len(y1) / len(y)
         gini = calculate_gini(y)
-	# 基尼不纯度
         gini_impurity = p * calculate_gini(y1) + (1-p) * calculate_gini(y2)
         return gini_impurity
     
@@ -155,29 +157,29 @@ class ClassificationTree(BinaryDecisionTree):
     def fit(self, X, y):
         self.impurity_calculation = self._calculate_gini_impurity
         self._leaf_value_calculation = self._majority_vote
+        self.gini_impurity_calculation = calculate_gini
         super(ClassificationTree, self).fit(X, y)
 
 		
 ### CART回归树
 class RegressionTree(BinaryDecisionTree):
-	# 计算方差减少量
-    def _calculate_variance_reduction(self, y, y1, y2):
-        var_tot = np.var(y, axis=0)
+    def _calculate_weighted_mse(self, y, y1, y2):
         var_y1 = np.var(y1, axis=0)
         var_y2 = np.var(y2, axis=0)
         frac_1 = len(y1) / len(y)
         frac_2 = len(y2) / len(y)
-        # 计算方差减少量
-        variance_reduction = var_tot - (frac_1 * var_y1 + frac_2 * var_y2)
-        return sum(variance_reduction)
+        # 计算左右子树加权总均方误差
+        weighted_mse = frac_1 * var_y1 + frac_2 * var_y2
+        
+        return sum(weighted_mse)
 
     # 节点值取平均
     def _mean_of_y(self, y):
         value = np.mean(y, axis=0)
         return value if len(value) > 1 else value[0]
 
-    # 回归树拟合
     def fit(self, X, y):
-        self.impurity_calculation = self._calculate_variance_reduction
+        self.impurity_calculation = self._calculate_weighted_mse
         self._leaf_value_calculation = self._mean_of_y
+        self.gini_impurity_calculation = lambda y: np.var(y, axis=0)
         super(RegressionTree, self).fit(X, y)
