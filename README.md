@@ -78,5 +78,35 @@ padding: 2px;">第23章示例</div>
 勘误表：[勘误表](https://github.com/luwill/Machine_Learning_Code_Implementation/blob/master/Errata/Errata.md)
 
 ---
+### 代码修订说明（2026.04）
+
+本仓库代码已完成两轮系统性的代码 review 和优化，主要修订如下：
+
+**结构调整**
+- 创建 `mlbook/` 共享库，消除 Ch7/Ch11/Ch12/Ch15 中重复的 `utils.py` 和 `cart.py`（6 个冗余文件统一为 2 个共享文件）
+- 添加 `requirements.txt`、`.gitignore`、`pyproject.toml` 等基础设施文件
+- 添加 `tests/` 测试目录，覆盖共享库和关键算法的 25 个测试用例
+
+**Bug 修复**
+- Ch5 LDA：修复 `calc_cov` 错误标准化导致类内散度矩阵计算错误（准确率 0.85→1.0）
+- Ch25 MCMC：修复 Gibbs 采样逻辑错误（`p_xy` 始终传入 y=-1 而非状态转移值）
+- Ch3 逻辑回归：修复 `accuracy` 函数 O(n²) 循环、添加交叉熵 log clipping 防 NaN
+- Ch23 HMM：修复前向算法和维特比算法中硬编码状态数 N=4 的问题
+- perceptron.py：补充缺失的 `initialize_with_zeros` 方法
+
+**API 现代化**
+- 修复 `sklearn.datasets.samples_generator` → `sklearn.datasets.make_blobs`
+- 修复 `np.float` → `np.float64`、`np.matrix` → 标准数组
+- 修复 `normed=1` → `density=True`（matplotlib）
+- Ch1 LogisticRegression 添加 `max_iter=200` 避免收敛警告
+
+**代码质量**
+- 共享库 `mlbook/decision_tree/` 添加完整类型注解
+- 修复多处拼写错误（`missclassification`、`initilize_with_zeros`）
+- Ch19 SVD：修复 Windows 硬编码路径为 `os.path.join`
+
+详见 commit 历史及 `tests/` 目录。
+
+---
 ### LICENSE
 本项目采用[知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。
