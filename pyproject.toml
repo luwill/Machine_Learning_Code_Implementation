@@ -1,0 +1,16 @@
+[project]
+name = "mlbook"
+version = "0.1.0"
+description = "机器学习 公式推导与代码实现 - 配套代码"
+requires-python = ">=3.9"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
